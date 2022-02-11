@@ -1,0 +1,45 @@
+models - 
+Dealer:
+    Name, Mobile Number, Nature of Material, Weight of Material, Quantity, City and State
+Driver:
+    Name, Age, Truck Number, Mobile Number, Truck Capacity, Transporter Name, Driving Experience, 3 routes
+Route:
+    FROM_city(foreign key), to_city(foreign key), Time(days), Driver(foreign key)
+Deal:
+    Driver(foreign key), Driver(foreign key), Route(foreign key), isconfirmed
+Notification:
+    msg, User(foreign key), isRead
+City:
+    name, state, latitude, longitude, id
+
+
+
+urls->
+/api -> routes
+/api/signup
+/api/login *
+/api/logout *
+
+/api/notifications/ *
+/api/notifications/{id}/ *
+
+
+/api/drivers
+/api/driver/{id} *
+/api/driver/{id}/routes *
+/api/driver/{id}/routes/{id}/crud *
+
+/api/dealers
+/api/dealer/{id} *
+/api/dealer/{id}/routes/ *
+/api/dealer/{id}/routes/{id}/crud *
+
+
+/api/deal/crud *
+/api/deal/{id}/accept *
+/api/deal/{id}/reject *
+
+
+
+/api/cities
+/api/cities/{states}
