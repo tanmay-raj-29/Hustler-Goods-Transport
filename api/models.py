@@ -19,7 +19,7 @@ class Route(models.Model):
     days = models.PositiveIntegerField(blank=False)
 
     def __str__(self):
-        return self.from_city + ' -> ' +self.to_city
+        return self.from_city.name + ' -> ' + self.to_city.name
 
 
 
